@@ -10,7 +10,7 @@ import 'firebase_options.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Firebase初期設定
+
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
     getUserLoggedInStatus();
   }
 
-  /// ログインステータス取得
+
   getUserLoggedInStatus() async {
     await SharedPreferencesData().getUserLoggedInStatus().then((value) {
       if (value != null) {

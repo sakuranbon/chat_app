@@ -10,7 +10,7 @@ import 'package:intl/intl.dart';
 import 'constant.dart';
 import 'state/search_state.dart';
 
-/// 検索画面
+
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
 
@@ -84,7 +84,6 @@ class _SearchScreenState extends State<SearchScreen> {
                   final notifier = ref.watch(searchStateProvider.notifier);
                   return TextField(
                     onSubmitted: (value) {
-                      // 検索
                       notifier.getSearchUser(searchEditingController.text);
                     },
                     controller: searchEditingController,

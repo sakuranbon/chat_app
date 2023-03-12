@@ -22,10 +22,10 @@ class ChatStateNotifier extends StateNotifier<ChatState> {
 
   final String roomId;
 
-  // 開いたら既読つける
+
   Future<void> setReadUser() async {
     final unReadChats = await FirestoreService().getUnReadChats(roomId);
-    // 全て既読にする
+
     for (var doc in unReadChats) {
       await FirebaseFirestore.instance
           .collection('rooms')
@@ -39,19 +39,17 @@ class ChatStateNotifier extends StateNotifier<ChatState> {
     }
   }
 
-// チャット送信ボタンフィールド
+
   Future<void> handleSendPressed(String message, String roomId) async {
     try {
       state = state.copyWith(isLoading: true);
 
-      // 先にドキュメント生成
       final chatDoc = FirebaseFirestore.instance
           .collection('rooms')
           .doc(roomId)
           .collection('chat')
           .doc();
 
-      // fireStoreに保存するデータ
       final chatMessage = ChatModel(
         id: chatDoc.id,
         userId: FirebaseAuth.instance.currentUser!.uid,
@@ -59,13 +57,11 @@ class ChatStateNotifier extends StateNotifier<ChatState> {
         readMembers: [FirebaseAuth.instance.currentUser!.uid],
         sendTime: DateTime.now(),
         createdAt: DateTime.now(),
-        // deviceTokens: deviceTokens,
       );
 
-      // チャット登録
+
       await chatDoc.set(chatMessage.toJson());
 
-      // roomの最新メッセージなども登録
       await FirebaseFirestore.instance.collection('rooms').doc(roomId).update({
         "recentMessage": message,
         "recentMessageSender": FirebaseAuth.instance.currentUser!.uid,

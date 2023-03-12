@@ -1,13 +1,5 @@
-// coverage:ignore-file
-// GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'user_model.dart';
-
-// **************************************************************************
-// FrozeGenerator
-// **************************************************************************
 
 T _$identity<T>(T value) => value;
 
@@ -18,7 +10,7 @@ UserModel _$UserModelFromJson(Map<String, dynamic> json) {
   return _UserModel.fromJson(json);
 }
 
-/// @nodoc
+
 mixin _$UserModel {
   String get uid => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
@@ -33,7 +25,7 @@ mixin _$UserModel {
       throw _privateConstructorUsedError;
 }
 
-/// @nodoc
+
 abstract class $UserModelCopyWith<$Res> {
   factory $UserModelCopyWith(UserModel value, $Res Function(UserModel) then) =
   _$UserModelCopyWithImpl<$Res, UserModel>;
@@ -49,50 +41,50 @@ abstract class $UserModelCopyWith<$Res> {
   $RoomModelCopyWith<$Res>? get room;
 }
 
-/// @nodoc
+
 class _$UserModelCopyWithImpl<$Res, $Val extends UserModel>
     implements $UserModelCopyWith<$Res> {
   _$UserModelCopyWithImpl(this._value, this._then);
 
-  // ignore: unused_field
+
   final $Val _value;
-  // ignore: unused_field
+
   final $Res Function($Val) _then;
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? uid = null,
-    Object? name = null,
-    Object? email = null,
+    Object? uid,
+    Object? name,
+    Object? email,
     Object? profilePic = freezed,
     Object? room = freezed,
-    Object? password = null,
+    Object? password,
   }) {
     return _then(_value.copyWith(
       uid: null == uid
           ? _value.uid
-          : uid // ignore: cast_nullable_to_non_nullable
+          : uid
       as String,
       name: null == name
           ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
+          : name
       as String,
       email: null == email
           ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
+          : email
       as String,
       profilePic: freezed == profilePic
           ? _value.profilePic
-          : profilePic // ignore: cast_nullable_to_non_nullable
+          : profilePic
       as String?,
       room: freezed == room
           ? _value.room
-          : room // ignore: cast_nullable_to_non_nullable
+          : room
       as RoomModel?,
       password: null == password
           ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
+          : password
       as String,
     ) as $Val);
   }
@@ -110,7 +102,7 @@ class _$UserModelCopyWithImpl<$Res, $Val extends UserModel>
   }
 }
 
-/// @nodoc
+
 abstract class _$$_UserModelCopyWith<$Res> implements $UserModelCopyWith<$Res> {
   factory _$$_UserModelCopyWith(
       _$_UserModel value, $Res Function(_$_UserModel) then) =
@@ -129,7 +121,7 @@ abstract class _$$_UserModelCopyWith<$Res> implements $UserModelCopyWith<$Res> {
   $RoomModelCopyWith<$Res>? get room;
 }
 
-/// @nodoc
+
 class __$$_UserModelCopyWithImpl<$Res>
     extends _$UserModelCopyWithImpl<$Res, _$_UserModel>
     implements _$$_UserModelCopyWith<$Res> {
@@ -140,51 +132,51 @@ class __$$_UserModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? uid = null,
-    Object? name = null,
-    Object? email = null,
+    Object? uid,
+    Object? name,
+    Object? email,
     Object? profilePic = freezed,
     Object? room = freezed,
-    Object? password = null,
+    Object? password,
   }) {
     return _then(_$_UserModel(
       uid: null == uid
           ? _value.uid
-          : uid // ignore: cast_nullable_to_non_nullable
+          : uid
       as String,
       name: null == name
           ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
+          : name
       as String,
       email: null == email
           ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
+          : email
       as String,
       profilePic: freezed == profilePic
           ? _value.profilePic
-          : profilePic // ignore: cast_nullable_to_non_nullable
+          : profilePic
       as String?,
       room: freezed == room
           ? _value.room
-          : room // ignore: cast_nullable_to_non_nullable
+          : room
       as RoomModel?,
       password: null == password
           ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
+          : password
       as String,
     ));
   }
 }
 
-/// @nodoc
+
 @JsonSerializable()
 class _$_UserModel implements _UserModel {
   const _$_UserModel(
       {this.uid = '',
         this.name = '',
         this.email = '',
-        this.profilePic = null,
-        this.room = null,
+        this.profilePic,
+        this.room,
         this.password = ''});
 
   factory _$_UserModel.fromJson(Map<String, dynamic> json) =>

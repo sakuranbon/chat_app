@@ -1,20 +1,12 @@
-// coverage:ignore-file
-// GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'chat_room_state.dart';
 
-// **************************************************************************
-// FreezedGenerator
-// **************************************************************************
 
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-/// @nodoc
 mixin _$ChatState {
   bool get isLoading => throw _privateConstructorUsedError;
   String get roomId => throw _privateConstructorUsedError;
@@ -24,7 +16,6 @@ mixin _$ChatState {
       throw _privateConstructorUsedError;
 }
 
-/// @nodoc
 abstract class $ChatStateCopyWith<$Res> {
   factory $ChatStateCopyWith(ChatState value, $Res Function(ChatState) then) =
   _$ChatStateCopyWithImpl<$Res, ChatState>;
@@ -32,36 +23,34 @@ abstract class $ChatStateCopyWith<$Res> {
   $Res call({bool isLoading, String roomId});
 }
 
-/// @nodoc
+
 class _$ChatStateCopyWithImpl<$Res, $Val extends ChatState>
     implements $ChatStateCopyWith<$Res> {
   _$ChatStateCopyWithImpl(this._value, this._then);
 
-  // ignore: unused_field
   final $Val _value;
-  // ignore: unused_field
   final $Res Function($Val) _then;
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isLoading = null,
-    Object? roomId = null,
+    Object? isLoading,
+    Object? roomId,
   }) {
     return _then(_value.copyWith(
       isLoading: null == isLoading
           ? _value.isLoading
-          : isLoading // ignore: cast_nullable_to_non_nullable
+          : isLoading
       as bool,
       roomId: null == roomId
           ? _value.roomId
-          : roomId // ignore: cast_nullable_to_non_nullable
+          : roomId
       as String,
     ) as $Val);
   }
 }
 
-/// @nodoc
+
 abstract class _$$_ChatStateCopyWith<$Res> implements $ChatStateCopyWith<$Res> {
   factory _$$_ChatStateCopyWith(
       _$_ChatState value, $Res Function(_$_ChatState) then) =
@@ -71,7 +60,7 @@ abstract class _$$_ChatStateCopyWith<$Res> implements $ChatStateCopyWith<$Res> {
   $Res call({bool isLoading, String roomId});
 }
 
-/// @nodoc
+
 class __$$_ChatStateCopyWithImpl<$Res>
     extends _$ChatStateCopyWithImpl<$Res, _$_ChatState>
     implements _$$_ChatStateCopyWith<$Res> {
@@ -82,8 +71,8 @@ class __$$_ChatStateCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isLoading = null,
-    Object? roomId = null,
+    Object? isLoading,
+    Object? roomId,
   }) {
     return _then(_$_ChatState(
       isLoading: null == isLoading
@@ -98,7 +87,7 @@ class __$$_ChatStateCopyWithImpl<$Res>
   }
 }
 
-/// @nodoc
+
 
 class _$_ChatState implements _ChatState {
   const _$_ChatState({this.isLoading = false, this.roomId = ''});

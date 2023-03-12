@@ -2,10 +2,6 @@
 
 part of 'chat_model.dart';
 
-// **************************************************************************
-// JsonSerializableGenerator
-// **************************************************************************
-
 _$_ChatModel _$$_ChatModelFromJson(Map<String, dynamic> json) => _$_ChatModel(
   id: json['id'] as String? ?? '',
   userId: json['userId'] as String? ?? '',

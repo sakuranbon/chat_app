@@ -1,13 +1,5 @@
-// coverage:ignore-file
-// GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'chat_model.dart';
-
-// **************************************************************************
-// FreezedGenerator
-// **************************************************************************
 
 T _$identity<T>(T value) => value;
 
@@ -18,7 +10,7 @@ ChatModel _$ChatModelFromJson(Map<String, dynamic> json) {
   return _ChatModel.fromJson(json);
 }
 
-/// @nodoc
+
 mixin _$ChatModel {
   String get id => throw _privateConstructorUsedError;
   String get userId => throw _privateConstructorUsedError;
@@ -37,7 +29,7 @@ mixin _$ChatModel {
       throw _privateConstructorUsedError;
 }
 
-/// @nodoc
+
 abstract class $ChatModelCopyWith<$Res> {
   factory $ChatModelCopyWith(ChatModel value, $Res Function(ChatModel) then) =
   _$ChatModelCopyWithImpl<$Res, ChatModel>;
@@ -52,23 +44,22 @@ abstract class $ChatModelCopyWith<$Res> {
         @TimestampDateTimeConverter() DateTime? deletedAt});
 }
 
-/// @nodoc
 class _$ChatModelCopyWithImpl<$Res, $Val extends ChatModel>
     implements $ChatModelCopyWith<$Res> {
   _$ChatModelCopyWithImpl(this._value, this._then);
 
-  // ignore: unused_field
+
   final $Val _value;
-  // ignore: unused_field
+
   final $Res Function($Val) _then;
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? userId = null,
-    Object? messageText = null,
-    Object? readMembers = null,
+    Object? id,
+    Object? userId,
+    Object? messageText,
+    Object? readMembers,
     Object? sendTime = freezed,
     Object? createdAt = freezed,
     Object? deletedAt = freezed,
@@ -76,37 +67,37 @@ class _$ChatModelCopyWithImpl<$Res, $Val extends ChatModel>
     return _then(_value.copyWith(
       id: null == id
           ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+          : id
       as String,
       userId: null == userId
           ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+          : userId
       as String,
       messageText: null == messageText
           ? _value.messageText
-          : messageText // ignore: cast_nullable_to_non_nullable
+          : messageText
       as String,
       readMembers: null == readMembers
           ? _value.readMembers
-          : readMembers // ignore: cast_nullable_to_non_nullable
+          : readMembers
       as List<String>,
       sendTime: freezed == sendTime
           ? _value.sendTime
-          : sendTime // ignore: cast_nullable_to_non_nullable
+          : sendTime
       as DateTime?,
       createdAt: freezed == createdAt
           ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
+          : createdAt
       as DateTime?,
       deletedAt: freezed == deletedAt
           ? _value.deletedAt
-          : deletedAt // ignore: cast_nullable_to_non_nullable
+          : deletedAt
       as DateTime?,
     ) as $Val);
   }
 }
 
-/// @nodoc
+
 abstract class _$$_ChatModelCopyWith<$Res> implements $ChatModelCopyWith<$Res> {
   factory _$$_ChatModelCopyWith(
       _$_ChatModel value, $Res Function(_$_ChatModel) then) =
@@ -123,7 +114,7 @@ abstract class _$$_ChatModelCopyWith<$Res> implements $ChatModelCopyWith<$Res> {
         @TimestampDateTimeConverter() DateTime? deletedAt});
 }
 
-/// @nodoc
+
 class __$$_ChatModelCopyWithImpl<$Res>
     extends _$ChatModelCopyWithImpl<$Res, _$_ChatModel>
     implements _$$_ChatModelCopyWith<$Res> {
@@ -134,10 +125,10 @@ class __$$_ChatModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? userId = null,
-    Object? messageText = null,
-    Object? readMembers = null,
+    Object? id,
+    Object? userId,
+    Object? messageText,
+    Object? readMembers,
     Object? sendTime = freezed,
     Object? createdAt = freezed,
     Object? deletedAt = freezed,
@@ -145,37 +136,37 @@ class __$$_ChatModelCopyWithImpl<$Res>
     return _then(_$_ChatModel(
       id: null == id
           ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+          : id
       as String,
       userId: null == userId
           ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+          : userId
       as String,
       messageText: null == messageText
           ? _value.messageText
-          : messageText // ignore: cast_nullable_to_non_nullable
+          : messageText
       as String,
       readMembers: null == readMembers
           ? _value._readMembers
-          : readMembers // ignore: cast_nullable_to_non_nullable
+          : readMembers
       as List<String>,
       sendTime: freezed == sendTime
           ? _value.sendTime
-          : sendTime // ignore: cast_nullable_to_non_nullable
+          : sendTime
       as DateTime?,
       createdAt: freezed == createdAt
           ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
+          : createdAt
       as DateTime?,
       deletedAt: freezed == deletedAt
           ? _value.deletedAt
-          : deletedAt // ignore: cast_nullable_to_non_nullable
+          : deletedAt
       as DateTime?,
     ));
   }
 }
 
-/// @nodoc
+
 @JsonSerializable()
 class _$_ChatModel implements _ChatModel {
   const _$_ChatModel(
@@ -205,7 +196,7 @@ class _$_ChatModel implements _ChatModel {
   @JsonKey()
   List<String> get readMembers {
     if (_readMembers is EqualUnmodifiableListView) return _readMembers;
-    // ignore: implicit_dynamic_type
+
     return EqualUnmodifiableListView(_readMembers);
   }
 

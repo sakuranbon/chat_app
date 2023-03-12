@@ -42,7 +42,6 @@ class LoginStateNotifier extends StateNotifier<LoginState> {
       ) async {
     if (formKey!.currentState!.validate()) {
       state = state.copyWith(isLoading: true);
-      // Authログイン
       final EmailLogInResults emailLogInResults =
       await Auth().logInUserWithEmailandPassword(
         email,
@@ -50,15 +49,12 @@ class LoginStateNotifier extends StateNotifier<LoginState> {
       );
       String message = '';
       if (emailLogInResults == EmailLogInResults.LogInCompleted) {
-        // ユーザ情報取得
         QuerySnapshot snapshot =
         await FirestoreService().gettingUserData(email);
-        // 端末にも保存
         await SharedPreferencesData().saveUserLoggedInStatus(true);
         await SharedPreferencesData().saveUserEmailSF(email);
         await SharedPreferencesData().saveUserNameSF(snapshot.docs[0]['name']);
 
-        // trueにすることでLoginPageのref.listenで自動で画面遷移してくれます
         state = state.copyWith(navigateChatRoomPage: true);
       } else if (emailLogInResults == EmailLogInResults.EmailNotVerified) {
         message = 'メールアドレスが確認されませんでした \nユーザー登録をしてください';
@@ -68,9 +64,10 @@ class LoginStateNotifier extends StateNotifier<LoginState> {
         message = 'ログインに失敗しました';
       }
 
-      if (message != '')
+      if (message != '') {
         ScaffoldMessenger.of(context)
             .showSnackBar(SnackBar(content: Text(message)));
+      }
       state = state.copyWith(isLoading: false);
     } else {
       print('not Validated');

@@ -1,10 +1,7 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
+
 
 part of 'room_model.dart';
 
-// **************************************************************************
-// JsonSerializableGenerator
-// **************************************************************************
 
 _$_RoomModel _$$_RoomModelFromJson(Map<String, dynamic> json) => _$_RoomModel(
   roomId: json['roomId'] as String? ?? '',
@@ -13,7 +10,7 @@ _$_RoomModel _$$_RoomModelFromJson(Map<String, dynamic> json) => _$_RoomModel(
       .toList() ??
       const [],
   recentMessage: json['recentMessage'] as String? ?? '',
-  recentMessageSender: json['recentMessageSender'] as String? ?? null,
+  recentMessageSender: json['recentMessageSender'] as String?,
   recentMessageTime: const TimestampDateTimeConverter()
       .fromJson(json['recentMessageTime'] as Timestamp?),
   createdAt: const TimestampDateTimeConverter()

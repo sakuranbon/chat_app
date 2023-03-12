@@ -44,31 +44,30 @@ class ProfileStateNotifier extends StateNotifier<ProfileState> {
     state = state.copyWith(userName: user.name);
   }
 
-  /// 端末の画像を選択する
+
   Future<void> openImagePicker() async {
-    //ライブラリを開いて選択
     final pickedFile = await picker.pickImage(
       source: ImageSource.gallery,
       maxHeight: 600,
       maxWidth: 600,
     );
 
-    // 画像が選択されなかった場合はスキップ
+
     if (pickedFile == null) {
       return;
     }
 
-    // 選択した画像ファイルを代入
+
     state = state.copyWith(imageFile: File(pickedFile.path));
   }
 
-  /// ユーザ更新
+
   Future updateUser() async {
     state = state.copyWith(isLoading: true);
 
-    /// 画像更新&名前変更
+
     if (state.imageFile != null && state.userName.isNotEmpty) {
-      // storageに保存
+
       final ref = FirebaseStorage.instance
           .ref()
           .child('profileimages')
@@ -76,7 +75,7 @@ class ProfileStateNotifier extends StateNotifier<ProfileState> {
       await ref.putFile(state.imageFile!);
       imgURL = await ref.getDownloadURL();
 
-      // Firestoreアップデート
+
       await FirebaseFirestore.instance
           .collection('users')
           .doc(FirebaseAuth.instance.currentUser!.uid)
@@ -86,9 +85,9 @@ class ProfileStateNotifier extends StateNotifier<ProfileState> {
       });
       state = state.copyWith(isLoading: false);
     } else if (state.imageFile != null) {
-      /// 画像更新のみ
 
-      // storageに保存
+
+
       final ref = FirebaseStorage.instance
           .ref()
           .child('profileimages')
@@ -96,7 +95,7 @@ class ProfileStateNotifier extends StateNotifier<ProfileState> {
       await ref.putFile(state.imageFile!);
       imgURL = await ref.getDownloadURL();
 
-      // Firestoreアップデート
+
       await FirebaseFirestore.instance
           .collection('users')
           .doc(FirebaseAuth.instance.currentUser!.uid)
@@ -105,9 +104,9 @@ class ProfileStateNotifier extends StateNotifier<ProfileState> {
       });
       state = state.copyWith(isLoading: false);
     } else if (state.userName.isNotEmpty) {
-      /// 名前変更のみ
 
-      // Firestoreアップデート
+
+
       await FirebaseFirestore.instance
           .collection('users')
           .doc(FirebaseAuth.instance.currentUser!.uid)

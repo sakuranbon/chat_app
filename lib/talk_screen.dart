@@ -7,7 +7,6 @@ import 'package:intl/intl.dart';
 
 import 'model/chat_model.dart';
 
-/// チャット画面
 
 class ChatRoom extends ConsumerWidget {
   ChatRoom({
@@ -17,16 +16,14 @@ class ChatRoom extends ConsumerWidget {
   }) : super(key: key);
 
   final String roomId;
-  final UserModel friend; // 相手のUserModel
+  final UserModel friend;
 
   TextEditingController messageEditingController = TextEditingController();
   ScrollController listScrollController = ScrollController();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // チャット取得プロバイダ
     final asyncValue = ref.watch(chatStreamProvider(roomId));
-    // notifierでstateNotifierに定義したメソッドを触ることができます
     final notifier = ref.watch(chatStateProvider(roomId).notifier);
     return Scaffold(
       appBar: AppBar(
@@ -58,22 +55,16 @@ class ChatRoom extends ConsumerWidget {
               children: [
                 Expanded(
                     child: ListView(
-                      // Mapでリストごとにウィジェットを作成しています
                       children: data.docs.map((e) {
-                        // 開いた状態でメッセージが来ても既読
                         notifier.setReadUser();
 
-                        // eが実際のリストのうちの１つの物(この場合はチャット1つ)です。
-                        // それを繰り返してるイメージです。
-                        final chat = ChatModel.fromSnapshot(e); // ChatModelにはめ込む
+                        final chat = ChatModel.fromSnapshot(e);
 
-                        // 送信者の識別
                         bool sendByMe = false;
                         if (FirebaseAuth.instance.currentUser!.uid == chat.userId) {
                           sendByMe = true;
                         }
 
-                        // 送信時間をフォーマット
                         final sendTime = DateFormat('HH:mm').format(chat.sendTime!);
 
                         return Container(
@@ -112,7 +103,7 @@ class ChatRoom extends ConsumerWidget {
                       }).toList(),
                     )),
 
-                /// テキスト送信フィールド
+
                 Padding(
                   padding: const EdgeInsets.fromLTRB(8, 8, 8, 24),
                   child: TextFormField(
@@ -124,12 +115,10 @@ class ChatRoom extends ConsumerWidget {
                       hintText: 'メッセージ',
                       suffixIcon: IconButton(
                         onPressed: () {
-                          // Firestoreへの登録
                           notifier.handleSendPressed(
                             messageEditingController.text,
                             roomId,
                           );
-                          // 入力文字をクリア
                           messageEditingController.clear();
                         },
                         icon: const Icon(

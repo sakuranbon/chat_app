@@ -1,7 +1,5 @@
 import 'package:chat_app/time_stamp_date_time_converter.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:chat_app/time_stamp_date_time_converter.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'chat_model.freezed.dart';

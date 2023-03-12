@@ -11,8 +11,6 @@ import 'package:flutter/material.dart' hide Badge;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 
-/// ルーム画面
-
 class ChatRoomPage extends ConsumerWidget {
   ChatRoomPage({super.key});
 
@@ -20,7 +18,6 @@ class ChatRoomPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // ユーザリストを取得するプロバイダ
     final asyncValue = ref.watch(usersStreamProvider);
 
     return Scaffold(
@@ -53,7 +50,6 @@ class ChatRoomPage extends ConsumerWidget {
         body: SingleChildScrollView(
           child: Center(
             child: Column(children: [
-              /// 検索フィールド
               GestureDetector(
                 onTap: () {
                   Navigator.push(
@@ -83,7 +79,6 @@ class ChatRoomPage extends ConsumerWidget {
               ),
               const SizedBox(height: 16),
 
-              /// ユーザ一覧
               asyncValue.when(
                 loading: () => const Center(
                     child: CircularProgressIndicator(
@@ -117,7 +112,7 @@ class ChatRoomPage extends ConsumerWidget {
   }
 }
 
-/// ユーザ情報カード
+
 class UserCard extends ConsumerWidget {
   const UserCard({
     Key? key,

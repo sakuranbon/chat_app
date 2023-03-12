@@ -1,10 +1,10 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-/// 端末にデータを保存するSharedPreferences関連
+
 class SharedPreferencesData {
-  String userLoggedInKey = "LOGGEDINKEY";
-  String userNameKey = "USERNAMEKEY";
-  String userEmailKey = "USEREMAILKEY";
+  String userLoggedInKey = "DOGGEDLY";
+  String userNameKey = "USERNAME";
+  String userEmailKey = "USERNAME";
 
   Future<bool> saveUserLoggedInStatus(bool isUserLoggedIn) async {
     SharedPreferences sf = await SharedPreferences.getInstance();

@@ -1,13 +1,6 @@
-// coverage:ignore-file
-// GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'room_model.dart';
 
-// **************************************************************************
-// FreezedGenerator
-// **************************************************************************
 
 T _$identity<T>(T value) => value;
 
@@ -18,7 +11,7 @@ RoomModel _$RoomModelFromJson(Map<String, dynamic> json) {
   return _RoomModel.fromJson(json);
 }
 
-/// @nodoc
+
 mixin _$RoomModel {
   String get roomId => throw _privateConstructorUsedError;
   List<String> get members => throw _privateConstructorUsedError;
@@ -37,7 +30,7 @@ mixin _$RoomModel {
       throw _privateConstructorUsedError;
 }
 
-/// @nodoc
+
 abstract class $RoomModelCopyWith<$Res> {
   factory $RoomModelCopyWith(RoomModel value, $Res Function(RoomModel) then) =
   _$RoomModelCopyWithImpl<$Res, RoomModel>;
@@ -55,60 +48,60 @@ abstract class $RoomModelCopyWith<$Res> {
   $UserModelCopyWith<$Res>? get friend;
 }
 
-/// @nodoc
+
 class _$RoomModelCopyWithImpl<$Res, $Val extends RoomModel>
     implements $RoomModelCopyWith<$Res> {
   _$RoomModelCopyWithImpl(this._value, this._then);
 
-  // ignore: unused_field
+
   final $Val _value;
-  // ignore: unused_field
+
   final $Res Function($Val) _then;
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? roomId = null,
-    Object? members = null,
-    Object? recentMessage = null,
+    Object? roomId,
+    Object? members,
+    Object? recentMessage,
     Object? recentMessageSender = freezed,
     Object? recentMessageTime = freezed,
     Object? createdAt = freezed,
     Object? friend = freezed,
-    Object? unRead = null,
+    Object? unRead,
   }) {
     return _then(_value.copyWith(
       roomId: null == roomId
           ? _value.roomId
-          : roomId // ignore: cast_nullable_to_non_nullable
+          : roomId
       as String,
       members: null == members
           ? _value.members
-          : members // ignore: cast_nullable_to_non_nullable
+          : members
       as List<String>,
       recentMessage: null == recentMessage
           ? _value.recentMessage
-          : recentMessage // ignore: cast_nullable_to_non_nullable
+          : recentMessage
       as String,
       recentMessageSender: freezed == recentMessageSender
           ? _value.recentMessageSender
-          : recentMessageSender // ignore: cast_nullable_to_non_nullable
+          : recentMessageSender
       as String?,
       recentMessageTime: freezed == recentMessageTime
           ? _value.recentMessageTime
-          : recentMessageTime // ignore: cast_nullable_to_non_nullable
+          : recentMessageTime
       as DateTime?,
       createdAt: freezed == createdAt
           ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
+          : createdAt
       as DateTime?,
       friend: freezed == friend
           ? _value.friend
-          : friend // ignore: cast_nullable_to_non_nullable
+          : friend
       as UserModel?,
       unRead: null == unRead
           ? _value.unRead
-          : unRead // ignore: cast_nullable_to_non_nullable
+          : unRead
       as int,
     ) as $Val);
   }
@@ -126,7 +119,6 @@ class _$RoomModelCopyWithImpl<$Res, $Val extends RoomModel>
   }
 }
 
-/// @nodoc
 abstract class _$$_RoomModelCopyWith<$Res> implements $RoomModelCopyWith<$Res> {
   factory _$$_RoomModelCopyWith(
       _$_RoomModel value, $Res Function(_$_RoomModel) then) =
@@ -147,7 +139,6 @@ abstract class _$$_RoomModelCopyWith<$Res> implements $RoomModelCopyWith<$Res> {
   $UserModelCopyWith<$Res>? get friend;
 }
 
-/// @nodoc
 class __$$_RoomModelCopyWithImpl<$Res>
     extends _$RoomModelCopyWithImpl<$Res, _$_RoomModel>
     implements _$$_RoomModelCopyWith<$Res> {
@@ -158,63 +149,63 @@ class __$$_RoomModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? roomId = null,
-    Object? members = null,
-    Object? recentMessage = null,
+    Object? roomId,
+    Object? members,
+    Object? recentMessage,
     Object? recentMessageSender = freezed,
     Object? recentMessageTime = freezed,
     Object? createdAt = freezed,
     Object? friend = freezed,
-    Object? unRead = null,
+    Object? unRead,
   }) {
     return _then(_$_RoomModel(
       roomId: null == roomId
           ? _value.roomId
-          : roomId // ignore: cast_nullable_to_non_nullable
+          : roomId
       as String,
       members: null == members
           ? _value._members
-          : members // ignore: cast_nullable_to_non_nullable
+          : members
       as List<String>,
       recentMessage: null == recentMessage
           ? _value.recentMessage
-          : recentMessage // ignore: cast_nullable_to_non_nullable
+          : recentMessage
       as String,
       recentMessageSender: freezed == recentMessageSender
           ? _value.recentMessageSender
-          : recentMessageSender // ignore: cast_nullable_to_non_nullable
+          : recentMessageSender
       as String?,
       recentMessageTime: freezed == recentMessageTime
           ? _value.recentMessageTime
-          : recentMessageTime // ignore: cast_nullable_to_non_nullable
+          : recentMessageTime
       as DateTime?,
       createdAt: freezed == createdAt
           ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
+          : createdAt
       as DateTime?,
       friend: freezed == friend
           ? _value.friend
-          : friend // ignore: cast_nullable_to_non_nullable
+          : friend
       as UserModel?,
       unRead: null == unRead
           ? _value.unRead
-          : unRead // ignore: cast_nullable_to_non_nullable
+          : unRead
       as int,
     ));
   }
 }
 
-/// @nodoc
+
 @JsonSerializable()
 class _$_RoomModel implements _RoomModel {
   const _$_RoomModel(
       {this.roomId = '',
         final List<String> members = const [],
         this.recentMessage = '',
-        this.recentMessageSender = null,
+        this.recentMessageSender,
         @TimestampDateTimeConverter() this.recentMessageTime,
         @TimestampDateTimeConverter() this.createdAt,
-        this.friend = null,
+        this.friend,
         this.unRead = 0})
       : _members = members;
 
@@ -229,7 +220,7 @@ class _$_RoomModel implements _RoomModel {
   @JsonKey()
   List<String> get members {
     if (_members is EqualUnmodifiableListView) return _members;
-    // ignore: implicit_dynamic_type
+
     return EqualUnmodifiableListView(_members);
   }
 
@@ -248,7 +239,6 @@ class _$_RoomModel implements _RoomModel {
   @override
   @JsonKey()
   final UserModel? friend;
-// 相手のユーザ情報
   @override
   @JsonKey()
   final int unRead;
@@ -334,7 +324,7 @@ abstract class _RoomModel implements RoomModel {
   DateTime? get createdAt;
   @override
   UserModel? get friend;
-  @override // 相手のユーザ情報
+  @override
   int get unRead;
   @override
   @JsonKey(ignore: true)

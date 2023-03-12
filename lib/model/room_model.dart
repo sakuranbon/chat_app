@@ -15,8 +15,8 @@ class RoomModel with _$RoomModel {
     @Default(null) String? recentMessageSender,
     @TimestampDateTimeConverter() DateTime? recentMessageTime,
     @TimestampDateTimeConverter() DateTime? createdAt,
-    @Default(null) UserModel? friend, // 相手のユーザ情報
-    @Default(0) int unRead, // 未読チャット数
+    @Default(null) UserModel? friend,
+    @Default(0) int unRead,
   }) = _RoomModel;
 
   factory RoomModel.fromJson(Map<String, dynamic> json) =>

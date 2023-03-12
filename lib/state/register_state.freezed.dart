@@ -1,20 +1,12 @@
-// coverage:ignore-file
-// GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'register_state.dart';
-
-// **************************************************************************
-// FreezedGenerator
-// **************************************************************************
 
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-/// @nodoc
+
 mixin _$RegisterState {
   bool get isLoading => throw _privateConstructorUsedError;
   String get password => throw _privateConstructorUsedError;
@@ -27,7 +19,7 @@ mixin _$RegisterState {
       throw _privateConstructorUsedError;
 }
 
-/// @nodoc
+
 abstract class $RegisterStateCopyWith<$Res> {
   factory $RegisterStateCopyWith(
       RegisterState value, $Res Function(RegisterState) then) =
@@ -43,45 +35,43 @@ abstract class $RegisterStateCopyWith<$Res> {
   $UserModelCopyWith<$Res>? get userModel;
 }
 
-/// @nodoc
+
 class _$RegisterStateCopyWithImpl<$Res, $Val extends RegisterState>
     implements $RegisterStateCopyWith<$Res> {
   _$RegisterStateCopyWithImpl(this._value, this._then);
 
-  // ignore: unused_field
   final $Val _value;
-  // ignore: unused_field
   final $Res Function($Val) _then;
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isLoading = null,
-    Object? password = null,
+    Object? isLoading,
+    Object? password,
     Object? userModel = freezed,
-    Object? passwordInVisible = null,
-    Object? navigateChatRoomPage = null,
+    Object? passwordInVisible,
+    Object? navigateChatRoomPage,
   }) {
     return _then(_value.copyWith(
       isLoading: null == isLoading
           ? _value.isLoading
-          : isLoading // ignore: cast_nullable_to_non_nullable
+          : isLoading
       as bool,
       password: null == password
           ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
+          : password
       as String,
       userModel: freezed == userModel
           ? _value.userModel
-          : userModel // ignore: cast_nullable_to_non_nullable
+          : userModel
       as UserModel?,
       passwordInVisible: null == passwordInVisible
           ? _value.passwordInVisible
-          : passwordInVisible // ignore: cast_nullable_to_non_nullable
+          : passwordInVisible
       as bool,
       navigateChatRoomPage: null == navigateChatRoomPage
           ? _value.navigateChatRoomPage
-          : navigateChatRoomPage // ignore: cast_nullable_to_non_nullable
+          : navigateChatRoomPage
       as bool,
     ) as $Val);
   }
@@ -99,7 +89,7 @@ class _$RegisterStateCopyWithImpl<$Res, $Val extends RegisterState>
   }
 }
 
-/// @nodoc
+
 abstract class _$$_RegisterStateCopyWith<$Res>
     implements $RegisterStateCopyWith<$Res> {
   factory _$$_RegisterStateCopyWith(
@@ -118,7 +108,6 @@ abstract class _$$_RegisterStateCopyWith<$Res>
   $UserModelCopyWith<$Res>? get userModel;
 }
 
-/// @nodoc
 class __$$_RegisterStateCopyWithImpl<$Res>
     extends _$RegisterStateCopyWithImpl<$Res, _$_RegisterState>
     implements _$$_RegisterStateCopyWith<$Res> {
@@ -129,44 +118,43 @@ class __$$_RegisterStateCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isLoading = null,
-    Object? password = null,
+    Object? isLoading,
+    Object? password,
     Object? userModel = freezed,
-    Object? passwordInVisible = null,
-    Object? navigateChatRoomPage = null,
+    Object? passwordInVisible,
+    Object? navigateChatRoomPage,
   }) {
     return _then(_$_RegisterState(
       isLoading: null == isLoading
           ? _value.isLoading
-          : isLoading // ignore: cast_nullable_to_non_nullable
+          : isLoading
       as bool,
       password: null == password
           ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
+          : password
       as String,
       userModel: freezed == userModel
           ? _value.userModel
-          : userModel // ignore: cast_nullable_to_non_nullable
+          : userModel
       as UserModel?,
       passwordInVisible: null == passwordInVisible
           ? _value.passwordInVisible
-          : passwordInVisible // ignore: cast_nullable_to_non_nullable
+          : passwordInVisible
       as bool,
       navigateChatRoomPage: null == navigateChatRoomPage
           ? _value.navigateChatRoomPage
-          : navigateChatRoomPage // ignore: cast_nullable_to_non_nullable
+          : navigateChatRoomPage
       as bool,
     ));
   }
 }
 
-/// @nodoc
 
 class _$_RegisterState implements _RegisterState {
   const _$_RegisterState(
       {this.isLoading = false,
         this.password = '',
-        this.userModel = null,
+        this.userModel,
         this.passwordInVisible = true,
         this.navigateChatRoomPage = false});
 
